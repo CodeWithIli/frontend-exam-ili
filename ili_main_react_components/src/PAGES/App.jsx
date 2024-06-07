@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ToggleSwitch from "../components/UI/ToggleSwitch";
 import Button from "../components/UI/Button";
-import { AsyncImage } from "./components/UI/AsyncImage";
+import AsyncImage from "../components/UI/AsyncImg";
 
 function App() {
 

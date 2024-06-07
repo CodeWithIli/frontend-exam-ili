@@ -1,6 +1,6 @@
 import React from 'react';
 import {InView} from 'react-intersection-observer';
-import Image from './Image';
+import Image from './Img';
 
 export const AsyncImage = ({className, imgSrc, imgAltTxt, style}) => {
   return (
