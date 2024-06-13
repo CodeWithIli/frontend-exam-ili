@@ -1,37 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ili-Main-Html-CSS</title>
-    <link rel="stylesheet" href="/styles/output.css">
-</head>
-<body class="bg-gray-100 p-8">
-    
+    <link rel="stylesheet" href="/ili_main_html-css/styles/output.css" />
+  </head>
+  <body class="bg-gray-100 p-8">
     <main class="grid justify-center">
+      <header class="text-4xl">Fetch Photos</header>
 
-        <header class="text-4xl">Fetch Photos</header>
+      <section
+        title="Photo Functionality"
+        class="pt-8 grid grid-cols-2 max-w-3xl"
+      >
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="checkbox" class="sr-only peer" />
+          <div
+            class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all border-gray-600 peer-checked:bg-blue-600"
+          ></div>
+          <p class="ms-3 text-l font-medium">Make photos grayscale</p>
+        </label>
 
-        <section title="Photo Functionality" class="pt-8 grid grid-cols-2 max-w-3xl">
+        <button
+          class="border border-indigo-600 bg-indigo-600 p-2 rounded-md text-white"
+        >
+          Fetch new Photos
+        </button>
+      </section>
 
-            <label class="inline-flex items-center cursor-pointer">
-                <input type="checkbox" class="sr-only peer">
-                <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all border-gray-600 peer-checked:bg-blue-600"></div>
-                <p class="ms-3 text-l font-medium">Make photos grayscale</p>
-            </label>
-            
-            <button class="border border-indigo-600 bg-indigo-600 p-2 rounded-md text-white ">Fetch new Photos</button>
-        
-        </section>
-
-     <figure title="Fetched photos" class="grid gap-4 grid-cols-2 grid-rows-2 grid-flow-row content-center pt-4 max-w-3xl">
-        <img class="rounded-sm" src="test-images/istockphoto-1488457074-170667a.webp" alt="test-image-1">
-        <img class="rounded-sm" src="test-images/istockphoto-1488457074-170667a.webp" alt="test-image-2">
-        <img class="rounded-sm" src="test-images/istockphoto-1488457074-170667a.webp" alt="test-image-3">
-        <img class="rounded-sm" src="test-images/istockphoto-1488457074-170667a.webp" alt="test-image-4">
-    </figure>
-
+      <div
+        id="photo-wrapper"
+        title="Fetched Photos"
+        class="grid gap-4 grid-cols-2 grid-rows-2 grid-flow-row content-center pt-4 max-w-3xl"
+      >
+        <img
+          class="rounded-sm"
+          src="test-images/istockphoto-1488457074-170667a.webp"
+          alt="test-image-1"
+        />
+        <img
+          class="rounded-sm"
+          src="test-images/istockphoto-1488457074-170667a.webp"
+          alt="test-image-2"
+        />
+        <img
+          class="rounded-sm"
+          src="test-images/istockphoto-1488457074-170667a.webp"
+          alt="test-image-3"
+        />
+        <img
+          class="rounded-sm"
+          src="test-images/istockphoto-1488457074-170667a.webp"
+          alt="test-image-4"
+        />
+      </div>
     </main>
-    
-</body>
+  </body>
 </html>
