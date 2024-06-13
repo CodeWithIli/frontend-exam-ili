@@ -1,14 +1,11 @@
 import React from "react";
-import Header from "../components/Header";
-import PhotoFunc from "../components/PhotoFunc";
+import DefaultLayout from "../LAYOUT/DefaultLayout";
+
 
 function App() {
 
   return (
-    <main className="grid justify-center">
-        <Header />
-        <PhotoFunc />
-    </main>
+    <DefaultLayout/>
   );
 }
 
