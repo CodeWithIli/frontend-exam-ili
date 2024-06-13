@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./components/Header";
-import PhotoFunc from "./components/PhotoFunc";
+import Header from "../components/Header";
+import PhotoFunc from "../components/PhotoFunc";
 
 function App() {
 
