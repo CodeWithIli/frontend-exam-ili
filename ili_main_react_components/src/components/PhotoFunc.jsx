@@ -1,7 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ToggleSwitch from "./ToggleSwitch";
 import Button from "./Button";
 import FetchPhotos from "./FetchPhotos";
+import dummyData from "../STORE/dummyData";
 
 export default function PhotoFunc() {
     
@@ -14,6 +15,15 @@ export default function PhotoFunc() {
       fetchPhotosRef.current.fetchPhotos(nr);
     }
   };
+
+  useEffect(() => {
+    const loadDummyData = () => {
+      const dummyUrls = dummyData.map(photo => photo.url);
+
+      setImageUrls(dummyUrls);
+    };
+    loadDummyData();
+  }, []);
 
   return (
     <section title="Fetched Photos" className="grid grid-cols-2 max-w-3xl gap-4">

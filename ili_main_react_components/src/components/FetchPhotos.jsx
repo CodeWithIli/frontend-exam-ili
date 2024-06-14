@@ -1,4 +1,4 @@
-import React, { forwardRef, useImperativeHandle } from "react";
+import React, { forwardRef, useEffect, useImperativeHandle } from "react";
 import Photo from "./Photo";
 const apiUrl = "https://picsum.photos/500/300";
 
@@ -33,7 +33,7 @@ const FetchPhotos = forwardRef(
       <>
         {imageUrls.map((url, index) => (
           <Photo
-            key={index}
+            key={index + 1}
             src={url}
             alt={`Image ${index + 1}`}
             style={{ filter: toggleChecked ? "grayscale(100%)" : "" }}
