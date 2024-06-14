@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import ToggleSwitch from "./ToggleSwitch";
 import Button from "./Button";
 import ApiService from "../service/ApiService";
-import dummyData from "../STORE/dummyData";
+import dummyData from "../store/dummyData";
 
 export default function PhotoFunc() {
   const [imageUrls, setImageUrls] = useState([]);
