@@ -5,7 +5,6 @@ import FetchPhotos from "./FetchPhotos";
 import dummyData from "../STORE/dummyData";
 
 export default function PhotoFunc() {
-    
   const [imageUrls, setImageUrls] = useState([]);
   const [toggleChecked, setToggleChecked] = useState(false);
   const fetchPhotosRef = useRef(null);
@@ -18,7 +17,7 @@ export default function PhotoFunc() {
 
   useEffect(() => {
     const loadDummyData = () => {
-      const dummyUrls = dummyData.map(photo => photo.url);
+      const dummyUrls = dummyData.map((photo) => photo.url);
 
       setImageUrls(dummyUrls);
     };
@@ -26,7 +25,10 @@ export default function PhotoFunc() {
   }, []);
 
   return (
-    <section title="Fetched Photos" className="grid grid-cols-2 max-w-3xl gap-4">
+    <section
+      title="Fetched Photos"
+      className="grid grid-cols-2 max-w-3xl gap-4"
+    >
       <ToggleSwitch
         onChange={() => setToggleChecked(!toggleChecked)}
         checked={toggleChecked}
