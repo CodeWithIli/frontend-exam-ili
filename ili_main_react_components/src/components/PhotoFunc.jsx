@@ -1,17 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import ToggleSwitch from "./ToggleSwitch";
 import Button from "./Button";
-import FetchPhotos from "./FetchPhotos";
+import ApiService from "../service/ApiService";
 import dummyData from "../STORE/dummyData";
 
 export default function PhotoFunc() {
   const [imageUrls, setImageUrls] = useState([]);
   const [toggleChecked, setToggleChecked] = useState(false);
-  const fetchPhotosRef = useRef(null);
+  const apiServiceRef = useRef(null);
 
   const handleFetchPhotos = (nr) => {
-    if (fetchPhotosRef.current) {
-      fetchPhotosRef.current.fetchPhotos(nr);
+    if (apiServiceRef.current) {
+      apiServiceRef.current.fetchPhotosApi(nr);
     }
   };
 
@@ -42,10 +42,10 @@ export default function PhotoFunc() {
         btnContent="Fetch New Photos"
         className="text-lg mt-3"
       />
-      <FetchPhotos
+      <ApiService
         imageUrls={imageUrls}
         setImageUrls={setImageUrls}
-        ref={fetchPhotosRef}
+        ref={apiServiceRef}
         toggleChecked={toggleChecked}
       />
       <Button

@@ -1,12 +1,10 @@
-import React, { forwardRef, useEffect, useImperativeHandle } from "react";
-import Photo from "./Photo";
+import React, { forwardRef, useImperativeHandle } from "react";
+import Photo from "../components/Photo";
 const apiUrl = "https://picsum.photos/500/300";
 
-const FetchPhotos = forwardRef(
-  ({ toggleChecked, imageUrls, setImageUrls, }, ref) => {
-
-    const fetchPhotos = async function (nr) {
-
+const ApiService = forwardRef(
+  ({ toggleChecked, imageUrls, setImageUrls }, ref) => {
+    const fetchPhotosApi = async function (nr) {
       let urls = Array(nr).fill(apiUrl);
 
       try {
@@ -26,7 +24,7 @@ const FetchPhotos = forwardRef(
     };
 
     useImperativeHandle(ref, () => ({
-      fetchPhotos,
+      fetchPhotosApi,
     }));
 
     return (
@@ -44,4 +42,4 @@ const FetchPhotos = forwardRef(
   }
 );
 
-export default FetchPhotos;
+export default ApiService;
