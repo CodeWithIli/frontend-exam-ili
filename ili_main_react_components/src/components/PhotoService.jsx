@@ -1,8 +1,8 @@
 import React, { forwardRef, useImperativeHandle } from "react";
-import Photo from "./Photo";
+import Photo from "./UI/Photo";
 const apiUrl = "https://picsum.photos/500/300";
 
-const FetchPhotos = forwardRef(
+const PhotoService = forwardRef(
   ({ toggleChecked, imageUrls, setImageUrls, }, ref) => {
 
     const fetchPhotos = async function (nr) {
@@ -44,4 +44,4 @@ const FetchPhotos = forwardRef(
   }
 );
 
-export default FetchPhotos;
+export default PhotoService;
