@@ -1,11 +1,10 @@
 import React from "react";
-import DefaultLayout from "../layout/DefaultLayout";
-
+import HomePage from "./HomePage";
 
 function App() {
 
   return (
-    <DefaultLayout/>
+    <HomePage/>
   );
 }
 
