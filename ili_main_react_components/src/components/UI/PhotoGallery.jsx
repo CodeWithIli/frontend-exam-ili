@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import ToggleSwitch from "./ToggleSwitch";
 import Button from "./Button";
-import FetchPhotos from "./FetchPhotos";
+import PhotoService from "../PhotoService";
 
-export default function PhotoFunc() {
+export default function PhotoGallery() {
     
   const [imageUrls, setImageUrls] = useState([]);
   const [toggleChecked, setToggleChecked] = useState(false);
@@ -15,6 +15,15 @@ export default function PhotoFunc() {
     }
   };
 
+  const handleFetchNew = () => {
+    setImageUrls([]);
+    handleFetchPhotos(4);
+  }
+
+  const handleFetchMore = () => {
+    handleFetchPhotos(4);
+  }
+
   return (
     <section title="Fetched Photos" className="grid grid-cols-2 max-w-3xl gap-4">
       <ToggleSwitch
@@ -23,24 +32,19 @@ export default function PhotoFunc() {
         btnContent="Make photos grayscale"
       />
       <Button
-        onClick={() => {
-          setImageUrls([]);
-          handleFetchPhotos(4);
-        }}
-        btnContent="Fetch New Photos"
+        onClick={handleFetchNew}
+        children="Fetch New Photos"
         className="text-lg mt-3"
       />
-      <FetchPhotos
+      <PhotoService
         imageUrls={imageUrls}
         setImageUrls={setImageUrls}
         ref={fetchPhotosRef}
         toggleChecked={toggleChecked}
       />
       <Button
-        onClick={() => {
-          handleFetchPhotos(4);
-        }}
-        btnContent="More Photos"
+        onClick={handleFetchMore}
+        children="More Photos"
         className={` text-lg w-[767px]`}
       />
     </section>
