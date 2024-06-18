@@ -1,15 +1,14 @@
 import React from "react";
-import Header from "./components/UI/Header";
-import PhotoGallery from "./components/UI/PhotoGallery";
+import Header from "./components/Header";
+import PhotoGallery from "./components/PhotoGallery";
 
-function App() {
-
+const App = () => {
   return (
     <main className="grid justify-center">
-        <Header />
-        <PhotoGallery />
+      <Header>Photo Fetcher</Header>
+      <PhotoGallery />
     </main>
   );
-}
+};
 
 export default App;
