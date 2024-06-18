@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/UI/Navbar';
+import Navbar from '../../components/UI/Navbar';
 
 const TestPage = () => {
   return (
