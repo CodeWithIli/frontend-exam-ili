@@ -44,8 +44,9 @@ const PhotoGallery = () => {
       <ToggleSwitch
         onChange={() => setToggleChecked(!toggleChecked)}
         checked={toggleChecked}
-        btnContent="Make photos grayscale"
-      />
+      >
+        Make photos grayscale
+      </ToggleSwitch>
       <Button onClick={handleFetchNew} className="text-lg mt-3">
         Fetch New Photos
       </Button>
