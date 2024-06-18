@@ -1,14 +1,16 @@
 import React from "react";
-import Header from "./components/Header";
-import PhotoGallery from "./components/PhotoGallery";
+import HomePage from "./pages/HomePage";
+import {Routes, Route} from "react-router-dom";
+import TestPage from "./pages/TestPage";
 
-const App = () => {
+function App() {
+
   return (
-    <main className="grid justify-center">
-      <Header>Photo Fetcher</Header>
-      <PhotoGallery />
-    </main>
+    <Routes>
+      <Route path="/" element={<HomePage/>} />
+      <Route path="/test" element={<TestPage/>} />
+    </Routes>
   );
-};
+}
 
 export default App;

@@ -1,12 +1,14 @@
 import React from "react";
-import Header from "../components/UI/Header";
-import PhotoGallery from "../components/UI/PhotoGallery";
+import Header from "../components/Header";
+import Navbar from "../components/UI/Navbar";
+import PhotoGallery from "../components/PhotoGallery";
 
 function HomePage() {
 
   return (
     <main className="grid justify-center">
-        <Header />
+        <Navbar/>
+        <Header> Photo Fetcher </Header>
         <PhotoGallery />
     </main>
   );
