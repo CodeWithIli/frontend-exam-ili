@@ -1,9 +1,11 @@
 import React from "react";
 
-export default function Header() {
+const Header = ({ children }) => {
   return (
     <header className="pt-6 bg-white p-2">
-      <h1 className="text-4xl">Photo Fetcher</h1>
+      <h1 className="text-4xl">{children}</h1>
     </header>
   );
-}
+};
+
+export default Header;
