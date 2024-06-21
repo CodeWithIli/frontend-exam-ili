@@ -1,0 +1,13 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+const Navbar = () => {
+  return (
+    <nav className="border-2 border-black p-2 m-3 rounded-lg min-w-[930px] flex justify-evenly">
+      <Link to="/">Welcome</Link>
+      <Link to="/home/">Home</Link>
+    </nav>
+  );
+};
+
+export default Navbar;
