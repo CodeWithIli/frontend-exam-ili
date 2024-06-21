@@ -2,7 +2,12 @@ import React from "react";
 import Router from "./router/";
 
 function App() {
-  return <Router />;
+  return (
+    <>
+      <Navbar/>
+      <Router />
+    </>
+  );
 }
 
 export default App;
