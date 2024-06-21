@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default function ToggleSwitch({ btnContent, checked, onChange }) {
+const ToggleSwitch = ({ btnContent, checked, onChange }) => {
   return (
     <label className="inline-flex items-center cursor-pointer">
       <input
@@ -13,4 +13,6 @@ export default function ToggleSwitch({ btnContent, checked, onChange }) {
       <span className={`ms-3 text-l font-medium`}> {btnContent} </span>
     </label>
   );
-}
+};
+
+export default ToggleSwitch;
