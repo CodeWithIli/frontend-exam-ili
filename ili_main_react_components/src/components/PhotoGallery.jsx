@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Photo from "./UI/Photo";
+import Photo from "./Photo";
 import ToggleSwitch from "./UI/ToggleSwitch";
 import Button from "./UI/Button";
 const apiUrl = "https://picsum.photos/500/300";
