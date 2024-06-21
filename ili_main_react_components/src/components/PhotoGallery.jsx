@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Photo from "./UI/Photo";
 import ToggleSwitch from "./UI/ToggleSwitch";
 import Button from "./UI/Button";
+import DummyData from "../store/dummyData";
 const apiUrl = "https://picsum.photos/500/300";
 
 const PhotoGallery = () => {
   const [imageUrls, setImageUrls] = useState([]);
   const [toggleChecked, setToggleChecked] = useState(false);
+
+  const loadDummyData = () => {
+    const dummyUrls = DummyData.map((photo) => photo.url);
+
+    setImageUrls(dummyUrls);
+  };
+
+  useEffect(() => {
+    loadDummyData();
+  }, []);
 
   const fetchPhotos = async function (nr) {
     let urls = Array(nr).fill(apiUrl);
