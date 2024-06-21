@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "../components/Header";
-import PhotoGallery from "../components/PhotoGallery";
+import ApiService from "../service/ApiService";
 
 const HomeLayout = () => {
   return (
     <main className="grid justify-center">
       <Header> Photo Fetcher </Header>
-      <PhotoGallery />
+      <ApiService />
     </main>
   );
 };
