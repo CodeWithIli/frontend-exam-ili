@@ -1,12 +1,13 @@
-import React from 'react'
+import React from "react";
 
-export default function Button({btnContent, className, onClick}) {
-
+const Button = ({ children, className, onClick }) => {
   return (
-    <div className={`${className} grid `}>
-        <button onClick={() => onClick()} className={` border-indigo-600 bg-indigo-600 text-white rounded-md p-2`}>
-            {btnContent}
-        </button>
-    </div>
-  )
-}
+    <button
+      onClick={onClick}
+      className={`${className} border-indigo-600 bg-indigo-600 text-white rounded-md p-2`}
+    >
+      {children}
+    </button>
+  );
+};
+export default Button;
